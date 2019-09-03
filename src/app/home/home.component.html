@@ -1,0 +1,65 @@
+<div layout="row">
+    <div class="left" flex="50">
+        <div>
+            病人: <input type="text" [(ngModel)]="vitalSign.patientId">
+        </div>
+        <div>
+            BP: <input id="bps" (focus)="elementId = 'bps'" type="text" [(ngModel)]="vitalSign.bps">/
+            <input id="bpd" (focus)="elementId = 'bpd'" type="text" [(ngModel)]="vitalSign.bpd">
+        </div>
+        <div>
+            Temp: <input id="temp" ng-focus="elementId = 'temp'" type="text"
+                [(ngModel)]="vitalSign.temperature">
+            <div>
+                <button (click)="vitalSign.temperature = 36">36</button>
+                <button (click)="vitalSign.temperature = 37">37</button>
+                <button (click)="vitalSign.temperature = 38">38</button>
+                <button (click)="vitalSign.temperature = 39">39</button>
+                <button (click)="vitalSign.temperature = 40">40</button>
+            </div>
+            <div>
+                <button (click)="setTemperature(0.1)">.1</button>
+                <button (click)="setTemperature(0.2)">.2</button>
+                <button (click)="setTemperature(0.3)">.3</button>
+                <button (click)="setTemperature(0.4)">.4</button>
+                <button (click)="setTemperature(0.5)">.5</button>
+                <button (click)="setTemperature(0.6)">.6</button>
+                <button (click)="setTemperature(0.7)">.7</button>
+                <button (click)="setTemperature(0.8)">.8</button>
+                <button (click)="setTemperature(0.9)">.9</button>
+            </div>
+        </div>
+        <div>
+            Pulse: <input id="pulse" (focus)="elementId = 'pulse'" type="text" [(ngModel)]="vitalSign.pulse">
+        </div>
+        <div>
+            RR: <input id="rr" (focus)="elementId = 'rr'" type="text" [(ngModel)]="vitalSign.rr">
+        </div>
+        <button (click)="save();">儲存</button>
+
+    </div>
+    <div class="right" flex="50">
+        <div style="padding: 2em;">
+            <div>
+                <button (click)="addText('1')">1</button>
+                <button (click)="addText('2')">2</button>
+                <button (click)="addText('3')">3</button>
+            </div>
+            <div>
+                <button (click)="addText('4')">4</button>
+                <button (click)="addText('5')">5</button>
+                <button (click)="addText('6')">6</button>
+            </div>
+            <div>
+                <button (click)="addText('7')">7</button>
+                <button (click)="addText('8')">8</button>
+                <button (click)="addText('9')">9</button>
+            </div>
+            <div>
+                <button (click)="addText('.')">.</button>
+                <button (click)="addText('0')">0</button>
+                <button (click)="removeText()"><i class="material-icons">arrow_back</i></button>
+            </div>
+        </div>
+    </div>
+</div>

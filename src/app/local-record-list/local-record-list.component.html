@@ -1,0 +1,10 @@
+<div *ngFor="let item of localRecords" (click)="item.isChecked = !item.isChecked"
+    style="padding: 0.5em; margin: 0.5em; border-radius: 4px; border: 1px solid gray;">
+    <input type="checkbox" [(ngModel)]="item.isChecked">
+    <span>{{item.timestamp}}</span>
+    <span>{{item.name}}</span>
+    <span>血壓:{{item.bps}}/{{item.bpd}}</span>
+    <span>體溫:{{item.temperature}}</span>
+    <span>心跳:{{item.pulse}}</span>
+    <span>呼吸:{{item.rr}}</span>
+</div>

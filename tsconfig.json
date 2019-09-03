@@ -11,6 +11,11 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "types": [
+      // add node as an option
+      "node",
+      "webrtc"
+    ],
     "typeRoots": [
       "node_modules/@types"
     ],
