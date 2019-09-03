@@ -56,6 +56,6 @@ export class LocalRecordListComponent implements OnInit {
   selectAll() {
     this.localRecords.map((item) => {
       item.isChecked = true;
-    })
+    });
   }
 }
